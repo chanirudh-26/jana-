@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,code,c,p=1,i;
+	float d;
+	printf("enter your arithmetic operation (for addition: 1; for subraction: 2; for multiplication: 3; for division: 4; to find power: 5; code: ");
+	scanf("%d",&code);
+	if (code==1){
+		printf("enter 'a' value: ");
+		scanf("%d",&a);
+		printf("enter 'b' value: ");
+		scanf("%d",&b);
+		c=a+b;
+		printf("The addition is %d",c);
+	}
+	else if (code==2){
+		printf("enter 'a' value: ");
+		scanf("%d",&a);
+		printf("enter 'b' value: ");
+		scanf("%d",&b);
+		c=a-b;
+		printf("The subraction is %d",c);
+	}
+	else if (code==3){
+		printf("enter 'a' value: ");
+		scanf("%d",&a);
+		printf("enter 'b' value: ");
+		scanf("%d",&b);
+		c=a*b;
+		printf("The multiplication is %d",c);
+	}
+	else if (code==4){
+		printf("enter 'a' value: ");
+		scanf("%d",&a);
+		printf("enter 'b' value: ");
+		scanf("%d",&b);
+		d=a/b;
+		printf("The division is %f",d);
+	}
+	else if (code==5){
+		printf("enter 'a' value: ");
+		scanf("%d",&a);
+		printf("enter 'b' value: ");
+		scanf("%d",&b);
+		for(i=b;i>0;i--){
+		p=p*a;
+		}
+		printf("the answer is %d",p);
+	}
+	else{
+		printf("enter a valid code.");
+	}
+	return 0;
+}
