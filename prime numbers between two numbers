@@ -9,11 +9,11 @@ int main() {
     n2 = n1 - n2;
     n1 = n1 - n2;
   }
-  printf("Prime numbers between %d and %d are: ", n1, n2);
+  printf("Prime numbers between %d and %d are:\n", n1, n2);
   for (i = n1 + 1; i < n2; ++i) {
   flag = checkPrimeNumber(i);
     if (flag == 1) {
-      printf("%d ", i);
+      printf("%d\n", i);
     }
   }
   return 0;
