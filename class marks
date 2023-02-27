@@ -1,0 +1,42 @@
+#include <stdio.h>
+struct stud{
+	float data[100];
+	int roll;
+	char name[1000];
+}s[100];
+int main()
+{
+	int a,b,c;
+	printf("enter number of students: ");
+	scanf("%d",&a);
+	for(b=0;b<a;b++){
+		printf("enter name: ");
+		scanf("%s",&s[b].name);
+		printf("enter roll number: ");
+		scanf("%d",&s[b].roll);
+		int i,j=1;
+		for(i=0;i<5;i++){
+			printf("enter subject %d mark: ",j);
+			scanf("%f",&s[b].data[i]);
+			j++;
+			s[b].data[5]=s[b].data[5]+s[b].data[i];
+		}
+		s[b].data[6]=s[b].data[5]/5;
+		printf("\n");
+	}
+	printf("\nDisplaying Information\n\n");
+	printf("enter roll number: ");
+	scanf("%d",&c);
+	for(b=0;b<a;b++){
+		int i,j=1;
+		if(c==s[b].roll){
+			printf("Name: %s\n",s[b].name);
+			for(i=0;i<5;i++){
+			printf("Subject %d mark: %f\n",j,s[b].data[i]);
+			j++;
+		}
+		printf("Total: %f\nAverage: %f",s[b].data[5],s[b].data[6]);
+		}
+	}
+	return 0;
+}
