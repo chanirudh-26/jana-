@@ -1,2 +1,0 @@
-# jana-
-c programming
