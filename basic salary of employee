@@ -1,0 +1,19 @@
+#include <stdio.h>
+struct employee{
+	float sal[5];
+}e;
+int main()
+{
+	int a,b,c;
+	printf("Enter basic salary: ");
+	scanf("%f",&e.sal[0]);
+	printf("enter loan amount: ");
+	scanf("%f",&e.sal[1]); 
+	e.sal[2]=e.sal[0]*0.02;
+	e.sal[3]=e.sal[0]*0.23;
+	e.sal[4]=e.sal[0]+e.sal[2]+e.sal[3]-e.sal[1];
+	printf("\n");
+	printf("\nDisplaying Salary\n\n");
+	printf("Gross salary is: %.2f\n\n",e.sal[4]);
+	return 0;
+}
